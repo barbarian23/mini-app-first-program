@@ -1,6 +1,6 @@
 <template>
   <div>
-    <dt>{{ title }}</dt>
+    <dt>{{ index }}{{ title }}</dt>
     <dd><div ref="contentRef"></div></dd>
   </div>
 </template>
@@ -44,23 +44,6 @@ export default {
 </script>
 
 <style scoped>
-dl {
-  counter-reset: count;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.04) 20%,
-    rgba(255, 255, 255, 0) 0%
-  );
-  padding-left: 4vw;
-  padding-right: 4vw;
-  margin: 0;
-  padding-left: 2vw;
-  padding-top: 3vw;
-  padding-bottom: 3vw;
-}
-dl + dl {
-  counter-reset: counter 4;
-}
 dt {
   counter-increment: count;
   color: #4f6d7aff;

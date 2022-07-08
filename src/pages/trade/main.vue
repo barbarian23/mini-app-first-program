@@ -1,7 +1,15 @@
 <template>
   <section class="dl-blurbs">
-    <dl v-for="article in articles">
-      <ArticleRssItem :title="article.title" :content="article.content" :key="article.guid" />
+    <div class="spaceIndicator">
+    <ul>
+      <li v-for="(item,index) in totalPage" v-on:click="goToPage" :id="item">
+        <strong  v-if="index == currentPage-1 ? true : false">{{item}}</strong>
+        <span v-else>{{item}}</span>
+      </li>
+    </ul>
+    </div>
+    <dl v-for="(article,index) in currentList">
+      <ArticleRssItem :title="article.title" :content="article.content" :index="index" :key="article.pubDate" />
     </dl>
   </section>
 </template>
@@ -18,6 +26,11 @@ export default {
   data() {
     return {
       articles: [],
+      currentList: [],
+      listLength: 0,
+      totalPage: 0,
+      numberInList: 10,
+      currentPage: 1,
       lang: LangUtils.getLangSrc().collect,
       menu_id: 1, //1产品，2文章，3企业
       prods: [],
@@ -55,19 +68,50 @@ export default {
         wx.showLoading();
         const tradeRss = await this.$rssFeeder("https://vnexpress.net/rss/kinh-doanh.rss");
         this.articles = tradeRss.items;
+        this.listLength = tradeRss.items.length;
+        this.totalPage = this.listLength%this.numberInList == 0 ? this.listLength/this.numberInList : this.listLength/this.numberInList + 1;
+        console.log("this.totalPage",this.totalPage);
+        this.currentList = this.articles.slice(this.currentPage,this.numberInList);
+        console.log(this.articles.length);
         wx.hideLoading();
         console.log("tradeRss",tradeRss);
     },
+    goToPage(event){
+       console.log("page",event.currentTarget.id);
+       this.currentPage = event.currentTarget.id;
+       const newStart = (this.currentPage-1)*this.numberInList
+       console.log(newStart);
+       this.currentList = this.articles.slice(newStart,newStart+this.numberInList);
+      //this.currentPage = newPage;
+
+    }
   }
 };
 </script>
 
 <style>
+.spaceIndicator{
+  background: linear-gradient( 90deg, rgba(0, 0, 0, 0.1) 20%, rgba(255, 255, 255, 0) 0% );
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+}
+ul {
+    display: inline-flex;
+    font-size: 23px;
+    /* text-decoration: none; */
+    list-style-type: none;
+}
+li {
+  margin: 5px 15px;
+  cursor: pointer;
+}
 dl {
   counter-reset: count;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.04) 20%,
+    rgba(0, 0, 0, 0.1) 20%,
     rgba(255, 255, 255, 0) 0%
   );
   padding-left: 4vw;

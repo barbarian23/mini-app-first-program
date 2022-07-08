@@ -1,7 +1,39 @@
 {
   "pages": [
     {
-      "path": "pages/index/main",
+      "path": "pages/trade/main",
+      "style": {
+        "navigationBarTitleText": "Kinh doanh",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/sport/main",
+      "style": {
+        "navigationBarTitleText": "名片",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/tour/main",
+      "style": {
+        "navigationBarTitleText": "名片",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/culture/main",
+      "style": {
+        "navigationBarTitleText": "名片",
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/weather/main",
       "style": {
         "navigationBarTitleText": "名片",
         "navigationStyle": "custom",
@@ -486,34 +518,33 @@
     "borderStyle": "white",
     "list": [
       {
-        "text": "Thể thao",
-        "pagePath": "pages/index/main",
+        "text": "Kinh tế",
+        "pagePath": "pages/trade/main",
         "iconPath": "static/tabs/card.png",
         "selectedIconPath": "static/tabs/card_select.png"
       },
       {
-        "text": "Kinh tế",
-
-        "pagePath": "pages/media/index",
+        "text": "Thể thao",
+        "pagePath": "pages/sport/main",
         "iconPath": "static/tabs/video.png",
         "selectedIconPath": "static/tabs/video_select.png"
       },
       {
         "text": "Du lịch",
-        "pagePath": "pages/Products/main",
+        "pagePath": "pages/tour/main",
         "iconPath": "static/tabs/prod_gray.png",
         "selectedIconPath": "static/tabs/prod_select.png"
       },
       {
-        "text": "Văn Hóa",
-        "pagePath": "pages/Dynamic/main",
+        "text": "Khoa học",
+        "pagePath": "pages/culture/main",
         "iconPath": "static/tabs/browser.png",
         "navigationStyle": "custom",
         "selectedIconPath": "static/tabs/browser_select.png"
       }, 
       {
-        "text": "Thời tiết",
-        "pagePath": "pages/WebSite/main",
+        "text": "Giải trí",
+        "pagePath": "pages/weather/main",
         "iconPath": "static/tabs/computer.png",
         "selectedIconPath": "static/tabs/computer_select.png"
       }
@@ -526,28 +557,28 @@
     "navigationBarBackgroundColor": "#fff",
     "backgroundColor": "#ffffff"
   },
-  "condition": { //模式配置，仅开发期间生效
-    "current": 0, //当前激活的模式(list 的索引项)
+  "condition": { 
+    "current": 0, 
     "list": [
       {
-        "name": "订单确认", //模式名称
-        "path": "pages/orderConfirm/main", //启动页面，必选
-        "query": "" //启动参数，在页面的onLoad函数里面得到
+        "name": "trade", 
+        "path": "pages/trade/main", 
+        "query": "" 
       },
       {
-        "name": "商城", //模式名称
-        "path": "pages/Product/main", //启动页面，必选
-        "query": "" //启动参数，在页面的onLoad函数里面得到
+        "name": "商城", 
+        "path": "pages/Product/main", 
+        "query": "" 
       },
       {
-        "name": "我的卡券", //模式名称
-        "path": "pages/coupon/mycoupon/main", //启动页面，必选
-        "query": "" //启动参数，在页面的onLoad函数里面得到
+        "name": "我的卡券", 
+        "path": "pages/coupon/mycoupon/main", 
+        "query": "" 
       },
       {
-        "name": "领券中心", //模式名称
-        "path": "pages/coupon/couponlist/main", //启动页面，必选
-        "query": "" //启动参数，在页面的onLoad函数里面得到
+        "name": "领券中心", 
+        "path": "pages/coupon/couponlist/main", 
+        "query": "" 
       },
       {
         "name": "消息",

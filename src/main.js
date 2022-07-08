@@ -8,12 +8,14 @@ import './static/css/animate.css'
 
 import LangUtils from './utils/LangUtils'
 import Constants from "./constants/Constants";
+import { rssFeeder } from "./utils/rssFeeder";
 
 Vue.config.productionTip = false
 
 App.mpType = 'app'
 Vue.mixin(mixins);
 Vue.prototype.$store = store;
+Vue.prototype.$rssFeeder = rssFeeder;
 
 Vue.prototype.$onLaunched = new Promise(resolve => {
   Vue.prototype.$isResolve = resolve

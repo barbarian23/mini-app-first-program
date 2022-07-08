@@ -209,7 +209,7 @@ export default {
     this.getCompanyModelSwtich()
   },
   async mounted() {
-    this.authUserInfo();
+    //this.authUserInfo();
     this.calculateNavBarHeight();
   },
   methods: {

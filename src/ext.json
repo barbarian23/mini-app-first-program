@@ -1,0 +1,49 @@
+{
+  "extEnable": true,
+  "extAppid": "wxbc8a19ea2c0a6df6",
+  "ext": {
+    "jumpAppId": "wx1c06c4e49bf6040e",
+    "jumpName": "",
+    "smartMainId":67
+  },
+  "tabBar": {
+    "color": "#737F80",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#51CDCB",
+    "borderStyle": "white",
+    "list": [
+      {
+        "text": "名片",
+        "pagePath": "pages/index/main",
+        "iconPath": "static/tabs/card.png",
+        "selectedIconPath": "static/tabs/card_select.png"
+      },
+      {
+        "text": "媒体",
+        "pagePath": "pages/media/index",
+        "iconPath": "static/tabs/video.png",
+        "selectedIconPath": "static/tabs/video_select.png"
+      },
+      {
+        "text": "商城",
+        "pagePath": "pages/Products/main",
+        "iconPath": "static/tabs/prod_gray.png",
+        "selectedIconPath": "static/tabs/prod_select.png"
+      },
+      {
+        "text": "动态",
+        "pagePath": "pages/Dynamic/main",
+        "iconPath": "static/tabs/browser.png",
+        "navigationStyle": "custom",
+        "selectedIconPath": "static/tabs/browser_select.png"
+      },
+      {
+        "text": "官网",
+        "pagePath": "pages/WebSite/main",
+        "iconPath": "static/tabs/computer.png",
+        "selectedIconPath": "static/tabs/computer_select.png"
+      }
+    ],
+    "position": "bottom"
+  }
+}

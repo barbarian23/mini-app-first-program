@@ -1,0 +1,14 @@
+{
+  "extEnable": true,
+  "extAppid": "wxbc8a19ea2c0a6df6",
+  "ext": {
+    "jumpAppId": "wx1c06c4e49bf6040e",
+    "jumpName": "",
+    "companyKey": "one-stand",
+    "uploadUrl": "https://hukeke-api.haomp.top/api",
+    "baseUrl": "https://hukeke-api.haomp.top/api",
+    "wssUrl": "wss://hukeke-socket.haomp.top:4430/ws",
+    "headImg": "http://wx.qlogo.cn/mmhead/Q3auHgzwzM451qcIXDcqmTPRgINVTkPtvoLT8AeRsKaVxEKmonb2CQ/0",
+    "ossUrl": "https://you-one-stand.oss-cn-shanghai.aliyuncs.com/"
+  }
+}

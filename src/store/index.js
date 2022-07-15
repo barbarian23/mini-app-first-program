@@ -8,6 +8,7 @@ Vue.use(Vuex)
 import msgList from './msgList'
 import msgCont from './msgCont'
 import jsMsg from './jsMsg'
+import loginStore from "./login";
 import {
   stat
 } from 'fs';
@@ -148,6 +149,7 @@ export default new Vuex.Store({
     msgList,
     msgCont,
     jsMsg,
+    loginStore
   },
   getters: {
     currentCompany: state => state.currentCompany,

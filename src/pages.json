@@ -1,6 +1,12 @@
 {
   "pages": [
     {
+      "path": "pages/login/main",
+      "style": {
+        "navigationBarTitleText": "Đăng nhập"
+      }
+    },
+    {
       "path": "pages/trade/main",
       "style": {
         "navigationBarTitleText": "Kinh doanh",

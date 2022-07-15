@@ -553,6 +553,10 @@ export default {
 }
 </script>
 <style>
+ .uni-tabbar-bottom {
+  	display: inherit!important;
+  }
+  
 .dec {
   display: flex;
   justify-content: space-between;

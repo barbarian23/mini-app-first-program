@@ -65,7 +65,7 @@ export default{
         index: index,
         text: item,
         success: (res) => {
-          console.log('setTabBarItem success', res)
+          console.log('setTabBarItem success', res, index, item)
         },
         fail: (err) => {
           console.log('setTabBarItem fail', err)

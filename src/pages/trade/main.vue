@@ -90,6 +90,10 @@ export default {
 </script>
 
 <style>
+ .uni-app--showleftwindow + .uni-tabbar-bottom {
+  	display: none;
+  }
+  
 .spaceIndicator{
   background: linear-gradient( 90deg, rgba(0, 0, 0, 0.1) 20%, rgba(255, 255, 255, 0) 0% );
     display: flex;
